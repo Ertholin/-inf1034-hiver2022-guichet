@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ca.uqtr.g12.inf1034_h22_guichet_auto.ChoiceController"
+      stylesheets="@styles.css" fx:id="fenetre" alignment="CENTER">
+
+    <HBox alignment="CENTER">
+        <GridPane hgap="80" vgap="20">
+
+            <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" alignment="CENTER">
+                <Text text="Faites votre choix" styleClass="titreChoix"/>
+            </HBox>
+
+            <Button fx:id="connexionDevise" userData="CHANGER DEVISE"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="200">CHANGER DEVISE
+            </Button>
+
+            <Button fx:id="connexionCheque"  userData="DÉPÔT DE CHÈQUE"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="200">DÉPÔT DE CHÈQUE
+            </Button>
+
+            <Button fx:id="connexionNIP"  userData="CHANGER NIP" minWidth="200"
+                    GridPane.columnIndex="0" GridPane.rowIndex="2">CHANGER NIP
+            </Button>
+
+            <Button fx:id="connexionRetrait"  userData="FAIRE RETRAIT" minWidth="200"
+                    GridPane.columnIndex="1" GridPane.rowIndex="2">FAIRE RETRAIT
+            </Button>
+
+            <Button fx:id="connexionReleve"  userData="IMPRIMER RELEVÉS" minWidth="200"
+                    GridPane.columnIndex="0" GridPane.rowIndex="3">IMPRIMER RELEVÉS
+            </Button>
+
+            <Button fx:id="connexionCompte"  userData="ÉTAT DU COMPTE" minWidth="200"
+                    GridPane.columnIndex="1" GridPane.rowIndex="3">ÉTAT DU COMPTE
+            </Button>
+
+            <Button fx:id="connexionArgent"  userData="DÉPÔT D'ARGENT" minWidth="200"
+                     GridPane.columnIndex="0" GridPane.rowIndex="4">DÉPÔT D'ARGENT
+            </Button>
+
+            <Button fx:id="connexionFacture" userData="PAYER FACTURE" minWidth="200"
+                     GridPane.columnIndex="1" GridPane.rowIndex="4">PAYER FACTURE
+            </Button>
+
+            <HBox GridPane.columnIndex="0" GridPane.rowIndex="6"
+                  GridPane.columnSpan="2" alignment="CENTER">
+                <VBox alignment="TOP_CENTER">
+                    <Button fx:id="bouton_quitter"
+                            onMouseClicked="#onQuitter"
+                            userData="QUITTER" minWidth="200">
+                        Quitter
+                    </Button>
+                </VBox>
+            </HBox>
+        </GridPane>
+    </HBox>
+</HBox>

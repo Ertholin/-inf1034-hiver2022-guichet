@@ -1,0 +1,73 @@
+#fenetre {
+    -fx-background-color: #656363;
+    -fx-font-family: "Trebuchet MS";
+}
+
+.titre {
+    -fx-font-size: 32pt;
+    -fx-fill: #64c966;
+}
+.titreChoix {
+    -fx-font-size: 22pt;
+    -fx-fill: #64c966;
+    -fx-font-weight: bold;
+}
+
+/*
+ * Message d'erreur quand le login est vide
+ */
+#message {
+    -fx-font-style: italic;
+    -fx-font-size: 12pt;
+    -fx-alignment: center;
+    -fx-fill: red;
+}
+Label {
+    -fx-font-size: 12pt;
+    -fx-text-alignment: left;
+    -fx-pref-width: 300px;
+    -fx-underline: true;
+   -fx-text-fill: #9999cc;
+}
+
+TextField, PasswordField {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Trebuchet MS";
+}
+
+Button {
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Trebuchet MS";
+}
+
+#connexion {
+    -fx-background-color: #669966;
+}
+
+#connexion:hover {
+    -fx-background-color: #66bb66;
+}
+
+#connexionDevise, #connexionArgent, #connexionCheque, #connexionCompte, #connexionReleve, #connexionFacture,
+#connexionNIP, #connexionRetrait{
+    -fx-background-color: #669966;
+    -fx-font-size: 14px;
+    -fx-padding: 36px;
+    -fx-border-color: #ffffff;
+}
+
+#connexionDevise:hover, #connexionArgent:hover, #connexionCheque:hover, #connexionCompte:hover, #connexionReleve:hover, #connexionFacture:hover,
+#connexionNIP:hover, #connexionRetrait:hover {
+    -fx-background-color: #66bb66;
+}
+
+#bouton_quitter{
+    -fx-background-color: #a83f3f;
+    -fx-border-color: #ffffff;
+}
+#bouton_quitter:hover {
+    -fx-background-color: #ff0000;
+}
