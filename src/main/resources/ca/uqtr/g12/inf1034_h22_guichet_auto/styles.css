@@ -3,12 +3,18 @@
     -fx-font-family: "Trebuchet MS";
 }
 
+#modal {
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Trebuchet MS";
+}
+
+
 .titre {
     -fx-font-size: 32pt;
     -fx-fill: #64c966;
 }
 .titreChoix {
-    -fx-font-size: 22pt;
+    -fx-font-size: 18pt;
     -fx-fill: #64c966;
     -fx-font-weight: bold;
 }
@@ -26,8 +32,8 @@ Label {
     -fx-font-size: 12pt;
     -fx-text-alignment: left;
     -fx-pref-width: 300px;
-    -fx-underline: true;
-   -fx-text-fill: #9999cc;
+    -fx-font-weight: bold;
+   -fx-text-fill: #0e0b0b;
 }
 
 TextField, PasswordField {
@@ -71,3 +77,12 @@ Button {
 #bouton_quitter:hover {
     -fx-background-color: #ff0000;
 }
+
+#bouton_confirmer{
+    -fx-background-color: #3aab40;
+    -fx-border-color: #ffffff;
+}
+#bouton_confirmer:hover {
+    -fx-background-color: #2b7e2f;
+}
+

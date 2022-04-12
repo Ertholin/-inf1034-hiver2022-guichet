@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ca.uqtr.g12.inf1034_h22_guichet_auto.ChangeDeviseModal"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@styles.css" fx:id="modal">
+
+    <top>
+        <AnchorPane>
+            <padding>
+                <Insets top="20" left="20" right="20" bottom="20"/>
+            </padding>
+
+
+
+        </AnchorPane>
+    </top>
+    <center>
+        <HBox alignment="CENTER">
+            <GridPane vgap="20" hgap="20">
+
+                <padding>
+                    <Insets top="20" left="20" right="20" bottom="20"/>
+                </padding>
+
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="20" top="20" left="20" right="20"/>
+                    </padding>
+                    <GridPane.rowIndex>0</GridPane.rowIndex>
+                    <GridPane.columnIndex>0</GridPane.columnIndex>
+
+                    <Text wrappingWidth="300">
+                        Merci d'avoir utilisé notre guichet automatique.
+                        Veuillez confirmer l'impression de votre reçu !
+                    </Text>
+                    <AnchorPane minWidth="300" minHeight="300">
+                        <Button fx:id="bouton_quitter" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0">Exit</Button>
+                        <Button fx:id="bouton_confirmer" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">Imprimer Reçu</Button>
+                    </AnchorPane>
+                </VBox>
+            </GridPane>
+        </HBox>
+    </center>
+    </BorderPane>

@@ -14,35 +14,35 @@
                 <Text text="Faites votre choix" styleClass="titreChoix"/>
             </HBox>
 
-            <Button fx:id="connexionDevise" userData="CHANGER DEVISE"
+            <Button onAction="#showScreen" fx:id="connexionDevise" userData="CHANGE_DEVISE"
                     GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="200">CHANGER DEVISE
             </Button>
 
-            <Button fx:id="connexionCheque"  userData="DÉPÔT DE CHÈQUE"
+            <Button onAction="#showScreen"  fx:id="connexionCheque"  userData="DEPOT_CHEQUE"
                     GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="200">DÉPÔT DE CHÈQUE
             </Button>
 
-            <Button fx:id="connexionNIP"  userData="CHANGER NIP" minWidth="200"
+            <Button onAction="#showScreen"  fx:id="connexionNIP"  userData="CHANGE_NIP" minWidth="200"
                     GridPane.columnIndex="0" GridPane.rowIndex="2">CHANGER NIP
             </Button>
 
-            <Button fx:id="connexionRetrait"  userData="FAIRE RETRAIT" minWidth="200"
+            <Button onAction="#showScreen"  fx:id="connexionRetrait"  userData="FAIRE_RETRAIT" minWidth="200"
                     GridPane.columnIndex="1" GridPane.rowIndex="2">FAIRE RETRAIT
             </Button>
 
-            <Button fx:id="connexionReleve"  userData="IMPRIMER RELEVÉS" minWidth="200"
+            <Button onAction="#showScreen"  fx:id="connexionReleve"  userData="IMPRIMER_RELEVER" minWidth="200"
                     GridPane.columnIndex="0" GridPane.rowIndex="3">IMPRIMER RELEVÉS
             </Button>
 
-            <Button fx:id="connexionCompte"  userData="ÉTAT DU COMPTE" minWidth="200"
+            <Button onAction="#showScreen"  fx:id="connexionCompte"  userData="ETAT_COMPTE" minWidth="200"
                     GridPane.columnIndex="1" GridPane.rowIndex="3">ÉTAT DU COMPTE
             </Button>
 
-            <Button fx:id="connexionArgent"  userData="DÉPÔT D'ARGENT" minWidth="200"
+            <Button onAction="#showScreen"  fx:id="connexionArgent"  userData="DEPOT_ARGENT" minWidth="200"
                      GridPane.columnIndex="0" GridPane.rowIndex="4">DÉPÔT D'ARGENT
             </Button>
 
-            <Button fx:id="connexionFacture" userData="PAYER FACTURE" minWidth="200"
+            <Button onAction="#showScreen"  fx:id="connexionFacture" userData="PAYER_FACTURE" minWidth="200"
                      GridPane.columnIndex="1" GridPane.rowIndex="4">PAYER FACTURE
             </Button>
 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.collections.FXCollections?>
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ca.uqtr.g12.inf1034_h22_guichet_auto.ChoiceController"
+      alignment="CENTER"
+      stylesheets="@styles.css" fx:id="fenetre">
+
+    <HBox alignment="CENTER">
+        <GridPane hgap="20" vgap="20">
+
+            <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
+                <Text text="Guichet - Changer Devise" styleClass="titreChoix"/>
+            </HBox>
+
+            <Label text="Entrez le montant:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="fieldMontant" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            <Label text="Choisir la devise:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <ChoiceBox value="Sélectionner" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Dollar US"/>
+                        <String fx:value="Euro"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+
+            <Button fx:id="bouton_quitter" GridPane.columnIndex="0" GridPane.rowIndex="6"
+                    onAction="#showScreen"
+                    userData="CHOICE_SCREEN">
+                Retour au menu
+            </Button>
+
+            <Button fx:id="bouton_confirmer" GridPane.columnIndex="1" GridPane.rowIndex="6"
+                    onAction="#showModal">
+                Valider
+            </Button>
+        </GridPane>
+    </HBox>
+
+</HBox>
+

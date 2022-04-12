@@ -30,14 +30,14 @@ public class LoginController {
     @FXML
     private Parent root;
 
-//    @FXML
-//    public void switchToChoiceScreen(ActionEvent event) throws IOException {
-//        Parent root = FXMLLoader.load(getClass().getResource("choice-screen.fxml"));
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//    }
+    @FXML
+    public void switchToChoiceScreen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("choice-screen.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 //
 //    @FXML
 //    public void changeScene(String fxml) throws IOException {
@@ -48,6 +48,16 @@ public class LoginController {
 //        stage.setScene(scene);
 //    }
 
+    private void changeScreen(String nomFichier) {
+        try {
+            Parent racine = FXMLLoader.load(getClass().getResource(nomFichier));
+            HelloApplication.getInstance().getStage().getScene().setRoot(racine);
+
+        } catch (IOException exception) {
+            System.out.println("Impossible de charger le fichier " + nomFichier + "\n" + exception.getMessage());
+        }
+    }
+
     @FXML
     protected void onConnecter() throws IOException {
         if (pin.getText().isBlank()) {
@@ -56,6 +66,7 @@ public class LoginController {
             message.setText("PIN incorrect");
         } else if (pin.getText().equals("12345")){
             message.setText("");
+            changeScreen("choice-screen.fxml");
         }
     }
 }
