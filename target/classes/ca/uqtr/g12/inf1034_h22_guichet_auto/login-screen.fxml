@@ -12,7 +12,7 @@
             stylesheets="@styles.css" fx:id="fenetre">
 
     <left>
-        <Rectangle width="300" height="500" fill="#656363"></Rectangle>
+        <Rectangle width="300" height="500" fill="#656363"/>
     </left>
 
     <center>
@@ -21,13 +21,13 @@
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
             <Text text="Guichet - Saisir PIN" styleClass="titre"/>
-            <PasswordField fx:id="pin"></PasswordField>
-            <Text fx:id="message"></Text>
+            <PasswordField fx:id="pin"/>
+            <Text fx:id="message"/>
             <Button fx:id="connexion" onMouseClicked="#onConnecter" text="Connecter!"/>
         </VBox>
     </center>
 
     <right>
-        <Rectangle width="300" height="500" fill="#656363"></Rectangle>
+        <Rectangle width="300" height="500" fill="#656363"/>
     </right>
 </BorderPane>

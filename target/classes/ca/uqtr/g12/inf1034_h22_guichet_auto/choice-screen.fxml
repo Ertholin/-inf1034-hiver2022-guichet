@@ -3,56 +3,124 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
 <HBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="ca.uqtr.g12.inf1034_h22_guichet_auto.ChoiceController"
       stylesheets="@styles.css" fx:id="fenetre" alignment="CENTER">
 
     <HBox alignment="CENTER">
-        <GridPane hgap="80" vgap="20">
+        <GridPane hgap="80" vgap="40">
 
-            <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" alignment="CENTER">
+            <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="4" alignment="CENTER">
                 <Text text="Faites votre choix" styleClass="titreChoix"/>
             </HBox>
 
-            <Button onAction="#showScreen" fx:id="connexionDevise" userData="CHANGE_DEVISE"
-                    GridPane.columnIndex="0" GridPane.rowIndex="1" minWidth="200">CHANGER DEVISE
+            <Button onAction="#showScreen" fx:id="connexionDevise" userData="CHANGE_DEVISE" GridPane.columnIndex="0"
+                    GridPane.rowIndex="1" minWidth="200" contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="14.0"
+                    mnemonicParsing="false" text="CHANGER DEVISE">
+                CHANGER DEVISE
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/change_devise.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionCheque"  userData="DEPOT_CHEQUE"
-                    GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="200">DÉPÔT DE CHÈQUE
+                    GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="200">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/depot_check_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionNIP"  userData="CHANGE_NIP" minWidth="200"
-                    GridPane.columnIndex="0" GridPane.rowIndex="2">CHANGER NIP
+                    GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/changer_pin_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionRetrait"  userData="FAIRE_RETRAIT" minWidth="200"
-                    GridPane.columnIndex="1" GridPane.rowIndex="2">FAIRE RETRAIT
+                    GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/faire_retrait_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionReleve"  userData="IMPRIMER_RELEVER" minWidth="200"
-                    GridPane.columnIndex="0" GridPane.rowIndex="3">IMPRIMER RELEVÉS
+                    GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/imprimer_releve_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionCompte"  userData="ETAT_COMPTE" minWidth="200"
-                    GridPane.columnIndex="1" GridPane.rowIndex="3">ÉTAT DU COMPTE
+                    GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/etat_compte_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionArgent"  userData="DEPOT_ARGENT" minWidth="200"
-                     GridPane.columnIndex="0" GridPane.rowIndex="4">DÉPÔT D'ARGENT
+                     GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/depot_argent_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
             <Button onAction="#showScreen"  fx:id="connexionFacture" userData="PAYER_FACTURE" minWidth="200"
-                     GridPane.columnIndex="1" GridPane.rowIndex="4">PAYER FACTURE
+                     GridPane.columnIndex="3" GridPane.rowIndex="2">
+                <graphic>
+                    <ImageView id="logo" pickOnBounds="true">
+                        <image>
+                            <Image url="@images/payer_facture_v.png" preserveRatio="true" smooth="true" />
+                        </image>
+                    </ImageView>
+                </graphic>
             </Button>
 
-            <HBox GridPane.columnIndex="0" GridPane.rowIndex="6"
-                  GridPane.columnSpan="2" alignment="CENTER">
+
+            <HBox GridPane.columnIndex="0" GridPane.rowIndex="3"
+                  GridPane.columnSpan="4" alignment="CENTER">
                 <VBox alignment="TOP_CENTER">
                     <Button fx:id="bouton_quitter"
                             onMouseClicked="#onQuitter"
                             userData="QUITTER" minWidth="200">
-                        Quitter
+                        <graphic>
+                            <ImageView id="logo" pickOnBounds="true">
+                                <image>
+                                    <Image url="@images/quitter.png" preserveRatio="true" smooth="true" />
+                                </image>
+                            </ImageView>
+                        </graphic>
                     </Button>
                 </VBox>
             </HBox>

@@ -2,6 +2,10 @@ package ca.uqtr.g12.inf1034_h22_guichet_auto;
 
 public enum ChoiceList {
 
+    /**
+     * Nom des différents fenêtres FXML
+     */
+
     CHOICE_SCREEN("choice-screen.fxml"),
     CHANGE_DEVISE("change-devise.fxml"),
     DEPOT_CHEQUE("depot-cheque.fxml"),

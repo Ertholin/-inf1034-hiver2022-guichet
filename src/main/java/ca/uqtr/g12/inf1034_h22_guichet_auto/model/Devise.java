@@ -2,11 +2,11 @@ package ca.uqtr.g12.inf1034_h22_guichet_auto.model;
 
 public class Devise {
 
-    private double amount;
+    private double montant;
 
-    private double newAmount;
+    private double nouveauMontant;
 
-    private double rate;
+    private double taux;
 
     private String typeDevise;
 
@@ -18,28 +18,35 @@ public class Devise {
         this.typeDevise = typeDevise;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getMontant() {
+        return montant;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setMontant(double montant) {
+        this.montant = montant;
     }
 
-    public double getNewAmount() {
-        return newAmount;
+    public double getNouveauMontant() {
+        return nouveauMontant;
     }
 
-    public void setNewAmount(double newAmount) {
-        this.newAmount = newAmount;
+    public void setNouveauMontant(double nouveauMontant) {
+        this.nouveauMontant = nouveauMontant;
     }
 
-    public double getRate() {
-        return rate;
+    public double getTaux() {
+        return taux;
     }
 
-    public void setRate(double rate) {
-        this.rate = rate;
+    public void setTaux(double taux) {
+        this.taux = taux;
+    }
+
+    public double changerToUs(double montant){
+        if(typeDevise == "Dollar US"){
+            nouveauMontant = montant * 1.27;
+        }
+        return nouveauMontant;
     }
 
 }
